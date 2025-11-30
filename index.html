@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zama Glossary</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        .container {
+            padding: 20px;
+        }
+        .term {
+            background-color: white;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .term h3 {
+            margin: 0 0 5px 0;
+            color: #333;
+        }
+        .term .category {
+            font-weight: bold;
+            color: #555;
+        }
+        .term p {
+            margin: 5px 0;
+            color: #666;
+        }
+        footer {
+            text-align: center;
+            background-color: #333;
+            color: white;
+            padding: 15px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Zama / FHE Glossary</h1>
+    </header>
+
+    <div class="container">
+        <div class="term">
+            <h3>Bootstrapping</h3>
+            <p class="category">Category: Mechanics</p>
+            <p>The crucial process in Fully Homomorphic Encryption that reduces the "noise" inside a ciphertext. It refreshes the encrypted data so that more calculations can be performed on it without corrupting the result.</p>
+        </div>
+
+        <div class="term">
+            <h3>Ciphertext</h3>
+            <p class="category">Category: General</p>
+            <p>Data that has been encrypted. In FHE, this data looks like random noise to the server, but the server can still perform math on it.</p>
+        </div>
+
+        <div class="term">
+            <h3>Concrete</h3>
+            <p class="category">Category: Zama Product</p>
+            <p>Zama’s open-source framework and compiler. It converts high-level programming code (like Python) into low-level FHE circuits, handling the complex cryptography automatically.</p>
+        </div>
+
+        <div class="term">
+            <h3>Concrete ML</h3>
+            <p class="category">Category: Zama Product</p>
+            <p>A specialized library built on top of Concrete designed for Data Scientists. It allows users to turn standard Machine Learning models (like Linear Regression or Decision Trees) into FHE-compatible models.</p>
+        </div>
+
+        <div class="term">
+            <h3>End-to-End Encryption (E2EE)</h3>
+            <p class="category">Category: General</p>
+            <p>A standard security method where data is encrypted during transfer. Unlike FHE, E2EE requires data to be decrypted before it can be processed or analyzed.</p>
+        </div>
+
+        <div class="term">
+            <h3>Evaluation Key</h3>
+            <p class="category">Category: Keys</p>
+            <p>Also known as the "Server Key." A public key given to the cloud provider that allows them to compute on the ciphertext without being able to decrypt or read the data.</p>
+        </div>
+
+        <div class="term">
+            <h3>FHE (Fully Homomorphic Encryption)</h3>
+            <p class="category">Category: General</p>
+            <p>A form of encryption that allows computations to be performed on encrypted data. The result of the computation, once decrypted, matches the result as if the operations had been performed on the plain text.</p>
+        </div>
+
+        <div class="term">
+            <h3>fhEVM</h3>
+            <p class="category">Category: Zama Product</p>
+            <p>A protocol developed by Zama that integrates FHE into the Ethereum Virtual Machine. It enables confidential smart contracts on public blockchains.</p>
+        </div>
+
+        <div class="term">
+            <h3>LWE (Learning With Errors)</h3>
+            <p class="category">Category: Math/Security</p>
+            <p>The difficult mathematical problem that forms the security foundation of the TFHE scheme. It involves solving linear equations that have had small errors introduced to them.</p>
+        </div>
+
+        <div class="term">
+            <h3>Noise</h3>
+            <p class="category">Category: Mechanics</p>
+            <p>A small amount of randomness added to data during encryption to ensure security. If noise grows too large during calculations, the data becomes unreadable; Bootstrapping is used to fix this.</p>
+        </div>
+
+        <div class="term">
+            <h3>PBS (Programmable Bootstrapping)</h3>
+            <p class="category">Category: Mechanics</p>
+            <p>A unique feature of the TFHE scheme. It cleans the noise from the ciphertext while simultaneously applying a function (like a lookup table) to the data. This makes Zama's approach very fast for non-linear operations (like Neural Networks).</p>
+        </div>
+
+        <div class="term">
+            <h3>Plaintext</h3>
+            <p class="category">Category: General</p>
+            <p>The original, unencrypted input data (e.g., a credit card number or health record) visible only to the user who holds the Secret Key.</p>
+        </div>
+
+        <div class="term">
+            <h3>Secret Key</h3>
+            <p class="category">Category: Keys</p>
+            <p>Also known as the "Client Key." The private key held exclusively by the user. It is the only key capable of encrypting the original data and decrypting the final result.</p>
+        </div>
+
+        <div class="term">
+            <h3>TFHE (Torus Fully Homomorphic Encryption)</h3>
+            <p class="category">Category: Cryptography Scheme</p>
+            <p>The specific FHE algorithm that Zama uses. It is known for its speed, exact results (no approximation), and efficient bootstrapping capabilities.</p>
+        </div>
+
+        <div class="term">
+            <h3>TFHE-rs</h3>
+            <p class="category">Category: Zama Product</p>
+            <p>The pure Rust implementation of the TFHE scheme. It is the low-level cryptographic engine that powers Zama's higher-level tools like Concrete.</p>
+        </div>
+
+        <div class="term">
+            <h3>Zama</h3>
+            <p class="category">Category: Company</p>
+            <p>An open-source cryptography company building tools to make Fully Homomorphic Encryption accessible and fast for developers.</p>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Zama Glossary. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
