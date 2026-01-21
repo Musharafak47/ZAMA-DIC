@@ -1,1 +1,1 @@
-# ZAMA-DIC
+HotStuff - DIC
